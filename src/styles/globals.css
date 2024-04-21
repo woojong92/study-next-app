@@ -3,82 +3,66 @@
 @tailwind utilities;
 
 .layout {
-  padding-top: 52px;
+  @apply pt-[52px];
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  height: 52px;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  background-color: white;
+  @apply flex justify-between items-center fixed w-full h-[52px] top-0 shadow-sm bg-white;
 }
 
 .navbar__logo {
-  color: darkblue;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 0px 18px;
+  @apply text-blue-800 text-lg font-semibold cursor-pointer px-[18px] py-0;
 }
 
 .navbar__list {
-  padding: 0px 18px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
+  @apply flex px-[18px] py-0 gap-3 items-center;
 }
 
 .navbar__button {
-  display: none;
-  cursor: pointer;
+  @apply hidden cursor-pointer;
 }
 
 .navbar__list-item {
-  cursor: pointer;
+  @apply cursor-pointer;
 }
 
 .navbar__list-item:hover {
-  color: darkgray;
+  /* color: darkgray; */
+  @apply text-gray-600;
 }
 
 @media only screen and (max-width: 600px) {
   .navbar__list {
-    display: none;
+    /* display: none; */
+    @apply hidden;
   }
 
   .navbar__button {
-    display: block;
-    padding: 0px 18px;
+    /* display: block;
+    padding: 0px 18px; */
+    @apply block px-[18px] py-0;
   }
 
   .navbar--mobile {
-    position: fixed;
+    /* position: fixed;
     width: 100%;
     height: 100vh;
     top: 52px;
     background-color: darkblue;
-    color: white;
+    color: white; */
+    @apply fixed w-full h-screen top-[52px] bg-blue-800 text-white;
   }
 
   .navbar__list-item--mobile {
-    cursor: pointer;
+    @apply cursor-pointer;
   }
 
   .navbar__list-item--mobile:hover {
-    color: darkgray;
+    @apply text-gray-600;
   }
 
   .navbar__list--mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: start;
-    padding: 24px 18px;
+    @apply flex flex-col gap-4 items-start px-[18px] py-6;
   }
 }
 
