@@ -1,5 +1,3 @@
-import Layout from "@/component/Layout";
-
 export default function StoreListPage() {
   return (
     <>
