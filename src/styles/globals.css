@@ -31,6 +31,10 @@
   @apply text-gray-600;
 }
 
+.infowindow {
+  @apply bg-blue-800 text-white block text-sm text-center  h-6 rounded-sm px-2 leading-6;
+}
+
 @media only screen and (max-width: 600px) {
   .navbar__list {
     /* display: none; */
