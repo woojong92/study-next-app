@@ -10,7 +10,7 @@ import {
 import { HiMapPin } from "react-icons/hi2";
 
 interface StoreBoxProps {
-  store: StoreType;
+  store: StoreType | null;
   setStore: Dispatch<SetStateAction<any>>;
 }
 
